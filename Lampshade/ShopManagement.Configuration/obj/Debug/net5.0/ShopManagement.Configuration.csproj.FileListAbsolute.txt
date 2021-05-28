@@ -24,3 +24,5 @@ C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ShopManagement.Configurat
 C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ShopManagement.Configuration\obj\Debug\net5.0\ref\ShopManagement.Configuration.dll
 C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ShopManagement.Configuration\obj\Debug\net5.0\ShopManagement.Configuration.pdb
 C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ShopManagement.Configuration\obj\Debug\net5.0\ShopManagement.Configuration.genruntimeconfig.cache
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ShopManagement.Configuration\bin\Debug\net5.0\01_LampshadeQuery.dll
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ShopManagement.Configuration\bin\Debug\net5.0\01_LampshadeQuery.pdb
