@@ -18,6 +18,15 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
         }
 
 
+        public List<ProductCategoryViewModel> GetProductCategories()
+        {
+            return _context.ProductCategories.Select(x => new ProductCategoryViewModel
+            {
+                Name = x.Name,
+                Id = x.Id
+            }).ToList();
+        }
+
         public EditProductCategory GetDetails(long id)
         {
             return _context.ProductCategories.Select(x => new EditProductCategory
