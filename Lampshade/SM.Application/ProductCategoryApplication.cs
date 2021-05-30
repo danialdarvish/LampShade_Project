@@ -40,7 +40,7 @@ namespace SM.Application
             if (productCategory == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            if(_productCategoryRepository.Exists(x=> x.Name == command.Name && x.Id == command.Id))
+            if(_productCategoryRepository.Exists(x=> x.Name == command.Name && x.Id != command.Id))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             var slug = command.Slug.Slugify();

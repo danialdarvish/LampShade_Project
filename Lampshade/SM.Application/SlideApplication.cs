@@ -36,7 +36,7 @@ namespace SM.Application
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
             slide.Edit(command.Picture, command.PictureAlt, command.PictureTitle,
-                command.Heading, command.Title, command.Text, command.BtnText, command.Link);
+                command.Heading, command.Title, command.Text, command.Link, command.BtnText);
 
             _slideRepository.SaveChanges();
             return operation.Succeed();
