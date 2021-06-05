@@ -130,3 +130,9 @@ C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ServiceHost\bin\Debug\net
 C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Infrastructure.EFCore.pdb
 C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Application.dll
 C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Application.pdb
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Inventory\Create.cshtml.g.cs
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Inventory\Edit.cshtml.g.cs
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Inventory\Index.cshtml.g.cs
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Inventory\Increase.cshtml.g.cs
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Inventory\Reduce.cshtml.g.cs
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Inventory\OperationLog.cshtml.g.cs

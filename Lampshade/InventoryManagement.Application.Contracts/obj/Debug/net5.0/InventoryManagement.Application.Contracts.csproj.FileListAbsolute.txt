@@ -13,3 +13,5 @@ C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\InventoryManagement.Appli
 C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\InventoryManagement.Application.Contracts\obj\Debug\net5.0\InventoryManagement.Application.Contracts.dll
 C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\InventoryManagement.Application.Contracts\obj\Debug\net5.0\ref\InventoryManagement.Application.Contracts.dll
 C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\InventoryManagement.Application.Contracts\obj\Debug\net5.0\InventoryManagement.Application.Contracts.pdb
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\InventoryManagement.Application.Contracts\bin\Debug\net5.0\ShopManagement.Application.Contracts.dll
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\InventoryManagement.Application.Contracts\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb
