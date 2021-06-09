@@ -19,6 +19,12 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
         }
 
 
+        public string GetSlugById(long id)
+        {
+            return _context.ProductCategories.Select(x =>
+                new {x.Id, x.Slug}).FirstOrDefault(x => x.Id == id)?.Slug;
+        }
+
         public List<ProductCategoryViewModel> GetProductCategories()
         {
             return _context.ProductCategories.Select(x => new ProductCategoryViewModel
@@ -37,7 +43,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                   Keywords = x.Keywords,
                   MetaDescription = x.MetaDescription,
                   Name = x.Name,
-                  Picture = x.Picture,
+                  //Picture = x.Picture,
                   Slug = x.Slug,
                   PictureAlt = x.PictureAlt,
                   PictureTitle = x.PictureTitle

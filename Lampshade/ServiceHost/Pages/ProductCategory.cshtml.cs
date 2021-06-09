@@ -17,7 +17,7 @@ namespace ServiceHost.Pages
 
         public void OnGet(string id)
         {
-            ProductCategory = _productCategoryQuery.GetProductCategoryWithProducts(id);
+            ProductCategory = _productCategoryQuery.GetProductCategoryWithProductsBy(id);
         }
     }
 }
