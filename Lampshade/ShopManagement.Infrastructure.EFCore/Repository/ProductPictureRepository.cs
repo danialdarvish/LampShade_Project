@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using _0_Framework.Application;
 using _0_Framework.Infrastructure;
 using Microsoft.EntityFrameworkCore;
@@ -20,12 +17,20 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             _context = context;
         }
 
+
+        public ProductPicture GetWithProductAndCategory(long id)
+        {
+            return _context.ProductPictures
+                .Include(x => x.Product)
+                .ThenInclude(x => x.Category)
+                .FirstOrDefault(x => x.Id == id);
+        }
+
         public EditProductPicture GetDetails(long id)
         {
             return _context.ProductPictures.Select(x => new EditProductPicture
                 {
                 Id = x.Id,
-                Picture = x.Picture,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
                 ProductId = x.ProductId

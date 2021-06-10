@@ -17,8 +17,10 @@ namespace ShopManagement.Domain.ProductAgg
         public string Slug { get; private set; }
         public string Keywords { get; private set; }
         public string MetaDescription { get; private set; }
+
         public long CategoryId { get; private set; }
         public ProductCategory Category { get; private set; }
+
         public List<ProductPicture> ProductPictures { get; private set; }
 
 
@@ -30,10 +32,7 @@ namespace ShopManagement.Domain.ProductAgg
             Code = code;
             ShortDescription = shortDescription;
             Description = description;
-
-            if (!string.IsNullOrWhiteSpace(picture)) 
-                Picture = picture;
-
+            Picture = picture;
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;
             Slug = slug;
@@ -50,7 +49,10 @@ namespace ShopManagement.Domain.ProductAgg
             Code = code;
             ShortDescription = shortDescription;
             Description = description;
-            Picture = picture;
+
+            if (!string.IsNullOrWhiteSpace(picture))
+                Picture = picture;
+
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;
             Slug = slug;

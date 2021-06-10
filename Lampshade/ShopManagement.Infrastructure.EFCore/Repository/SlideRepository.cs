@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using _0_Framework.Application;
 using _0_Framework.Infrastructure;
-using Microsoft.EntityFrameworkCore;
 using ShopManagement.Application.Contracts.Slide;
 using ShopManagement.Domain.SlideAgg;
 
@@ -23,7 +21,6 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             return _context.Slides.Select(x => new EditSlide
             {
                 Id = x.Id,
-                Picture = x.Picture,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
                 Heading = x.Heading,

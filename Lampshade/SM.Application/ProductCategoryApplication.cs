@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using _0_Framework.Application;
 using ShopManagement.Application.Contracts.ProductCategory;
 using ShopManagement.Domain.ProductCategoryAgg;
@@ -26,8 +25,11 @@ namespace SM.Application
 
             var slug = command.Slug.Slugify();
 
+            var picturePath = $"{command.Slug}";
+            var pictureName = _fileUploader.Upload(command.Picture, picturePath);
+
             var productCategory = new ProductCategory(command.Name, command.Description,
-                "", command.PictureAlt, command.PictureTitle, command.Keywords,
+                pictureName, command.PictureAlt, command.PictureTitle, command.Keywords,
                 command.MetaDescription, slug);
 
             _productCategoryRepository.Create(productCategory);
@@ -46,9 +48,11 @@ namespace SM.Application
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             var slug = command.Slug.Slugify();
+
             var picturePath = $"{command.Slug}";
-            var fileName = _fileUploader.Upload(command.Picture, picturePath);
-            productCategory.Edit(command.Name, command.Description, fileName,
+            var pictureName = _fileUploader.Upload(command.Picture, picturePath);
+
+            productCategory.Edit(command.Name, command.Description, pictureName,
                 command.PictureAlt, command.PictureTitle, command.Keywords,
                 command.MetaDescription, slug);
 
