@@ -54,7 +54,7 @@ namespace SM.Application
             var picturePath = _fileUploader.Upload(command.Picture, path);
 
             product.Edit(command.Name, command.Code, command.ShortDescription,
-                command.ShortDescription, picturePath, command.PictureAlt, command.PictureTitle,
+                command.Description, picturePath, command.PictureAlt, command.PictureTitle,
                 slug, command.Keywords, command.MetaDescription, command.CategoryId);
             _productRepository.SaveChanges();
             return operation.Succeed();
