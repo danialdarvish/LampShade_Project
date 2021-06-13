@@ -249,7 +249,18 @@
     <script>
         $('.persianDateInput').persianDatepicker({
             format: 'YYYY/MM/DD',
-            autoClose: true
+            autoClose: true,
+            initialValueType: "persian"
+        });
+    </script>
+
+
+    <script src="https://cdn.tiny.cloud/1/1hkd90b4ite1fqxky4wksun2yiibg68rercyot6mbr7je620/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#BodyContent',
+            plugins: 'advlist autolink lists image charmap print preview hr anchor pagebreak',
+            toolbar_mode: 'floating',
         });
     </script>
 </body>
