@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using _0_Framework.Application;
 using _0_Framework.Infrastructure;
@@ -52,9 +53,11 @@ namespace BlogManagement.Infrastructure.EFCore.Repository
                     Id = x.Id,
                     Title = x.Title,
                     Picture = x.Picture,
-                    ShortDescription = x.ShortDescription,
+                    ShortDescription = x.ShortDescription
+                        .Substring(0, Math.Min(x.ShortDescription.Length, 50)) + "...",
                     Category = x.Category.Name,
-                    PublishDate = x.PublishDate.ToFarsi()
+                    PublishDate = x.PublishDate.ToFarsi(),
+                    CategoryId = x.CategoryId
                 });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Title))

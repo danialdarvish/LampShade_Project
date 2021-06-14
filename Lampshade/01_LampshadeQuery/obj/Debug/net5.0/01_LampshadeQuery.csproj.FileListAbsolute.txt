@@ -31,3 +31,9 @@ C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\01_LampshadeQuery\bin\Deb
 C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\01_LampshadeQuery\bin\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.pdb
 C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\01_LampshadeQuery\bin\Debug\net5.0\DiscountManagement.Application.Contract.pdb
 C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\01_LampshadeQuery\bin\Debug\net5.0\DiscountManagement.Domain.pdb
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\01_LampshadeQuery\bin\Debug\net5.0\BlogManagement.Application.Contracts.dll
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\01_LampshadeQuery\bin\Debug\net5.0\BlogManagement.Domain.dll
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\01_LampshadeQuery\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.dll
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\01_LampshadeQuery\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.pdb
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\01_LampshadeQuery\bin\Debug\net5.0\BlogManagement.Application.Contracts.pdb
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\01_LampshadeQuery\bin\Debug\net5.0\BlogManagement.Domain.pdb
