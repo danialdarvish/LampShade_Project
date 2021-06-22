@@ -22,7 +22,7 @@ namespace AccountManagement.Application
         }
 
 
-        public OperationResult Create(CreateAccount command)
+        public OperationResult Register(RegisterAccount command)
         {
             var operation = new OperationResult();
 
