@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iVHxlsKox6pcv6tJNiSG6WnaJ18KTuTS/SS/RXXDF16fNmcDKDWNKox2pCBEP/KUO7pLEKvZjp97UZgKAHoIUQ==",
+  "dgSpecHash": "gKmccW7qB6zpOV6fHdMwH6PRlkdepAhcYGsA83IGNgtdieVGWbknityyRhhq6vqq+o+8IH8uq0uQDUFmPGfMpw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ASUS\\source\\repos\\LampShade_Project\\Lampshade\\AccountManagement.Configuration\\AccountManagement.Configuration.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,7 @@
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

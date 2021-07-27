@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.PortableExecutable;
 using _0_Framework.Domain;
 
 namespace InventoryManagement.Domain.InventoryAgg

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "v7+Vu2d9sPrdBVYoZlKAyo3LNdysdpwi3L2jlo2hzhmEZovUOOd9CMq897fQy3nMZ7jSvKygvZ35FogUs921Ig==",
+  "dgSpecHash": "iN2UP+j5lDhVMjRQIzVjJTEqd0KARlfR/Y8hHvEvxwk8tLp2qS95xMLdShT1Hkdqiz2CqsHcV3WlLDaIsiwG7Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\ASUS\\source\\repos\\LampShade_Project\\Lampshade\\InventoryManagement.Infrastructure.EFCore\\InventoryManagement.Infrastructure.EFCore.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,7 @@
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

@@ -60,7 +60,9 @@ Date: Jun 2015
 }
 
 /******** 1. General ********/
-
+.oneee {
+    display: inline-flex !important;
+}
 body {
     background: #f5f5f5;
     margin: 0;
@@ -2539,8 +2541,10 @@ table.focus-on tbody tr.focused th, table.focus-on tbody tr.focused td {
 
 /* Datatable */
 
-#datatable td { font-weight: normal;
-    font-size: 17px;
+#datatable td {
+    font-weight: normal;
+    font-size: 16px;
+   
 }
 
 div.dataTables_paginate ul.pagination { margin-top: 30px; }
@@ -3479,4 +3483,10 @@ th { text-align: right; }
         background-color: #B20000;
         box-shadow: 0 0 3px #B20000;
     }
+}
+.checkout-payment-method {
+    margin: auto !important;
+    padding: 45px !important;
+    width: 100% !important;
+    background-color: white;
 }

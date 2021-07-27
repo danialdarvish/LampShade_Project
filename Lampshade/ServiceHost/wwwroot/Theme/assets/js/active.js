@@ -435,13 +435,12 @@
     =============================================*/
     
     
-    $('[name="payment-method"]').on('click', function () {
+    $('[name="paymentMethod"]').on('click', function () {
 
         var $value = $(this).attr('value');
 
         $('.single-method p').slideUp();
         $('[data-method="' + $value + '"]').slideDown();
-
     });
     
     

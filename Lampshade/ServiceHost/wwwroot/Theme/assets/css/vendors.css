@@ -5644,7 +5644,8 @@ a.badge-dark:focus {
 .alert-warning {
     color: #856404;
     background-color: #fff3cd;
-    border-color: #ffeeba
+    border-color: #ffeeba;
+    font-size: 16px;
 }
 
     .alert-warning hr {

@@ -7,15 +7,18 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using _0_Framework.Application;
+using _0_Framework.Application.ZarinPal;
 using _0_Framework.Infrastructure;
 using AccountManagement.Configuration;
 using BlogManagement.Infrastructure.Configuration;
 using CommentManagement.Infrastructure.Configuration;
 using DiscountManagement.Configuration;
 using InventoryManagement.Infrastructure.Configuration;
+using InventoryManagement.Presentation.Api;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using ShopManagement.Configuration;
+using ShopManagement.Presentation.Api;
 
 namespace ServiceHost
 {
@@ -41,6 +44,7 @@ namespace ServiceHost
 
             services.AddTransient<IFileUploader, FileUploader>();
             services.AddTransient<IAuthHelper, AuthHelper>();
+            services.AddTransient<IZarinPalFactory, ZarinPalFactory>();
 
             services.AddSingleton<IPasswordHasher, PasswordHasher>();
             services.AddSingleton(HtmlEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Arabic));
@@ -49,7 +53,7 @@ namespace ServiceHost
 
             services.Configure<CookiePolicyOptions>(options =>
             {
-                options.CheckConsentNeeded = context => true;
+                options.CheckConsentNeeded = context => false;
                 options.MinimumSameSitePolicy = SameSiteMode.Lax;
             });
 
@@ -77,20 +81,25 @@ namespace ServiceHost
 
             });
 
-            services.AddRazorPages().AddRazorPagesOptions(options =>
-            {
-                options.Conventions
-                    .AuthorizeAreaFolder("Administration", "/", "AdminArea");
+            services.AddRazorPages()
+                .AddMvcOptions(options => options.Filters.Add<SecurityPageFilter>())
+                .AddRazorPagesOptions(options =>
+                {
+                    options.Conventions
+                        .AuthorizeAreaFolder("Administration", "/", "AdminArea");
 
-                options.Conventions
-                    .AuthorizeAreaFolder("Administration", "/Shop", "Shop");
+                    options.Conventions
+                        .AuthorizeAreaFolder("Administration", "/Shop", "Shop");
 
-                options.Conventions
-                    .AuthorizeAreaFolder("Administration", "/Discounts", "Discount");
+                    options.Conventions
+                        .AuthorizeAreaFolder("Administration", "/Discounts", "Discount");
 
-                options.Conventions
-                    .AuthorizeAreaFolder("Administration", "/Accounts", "Account");
-            });
+                    options.Conventions
+                        .AuthorizeAreaFolder("Administration", "/Accounts", "Account");
+                })
+                .AddApplicationPart(typeof(ProductController).Assembly)
+                .AddApplicationPart(typeof(InventoryController).Assembly)
+                .AddNewtonsoftJson();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -120,6 +129,7 @@ namespace ServiceHost
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }

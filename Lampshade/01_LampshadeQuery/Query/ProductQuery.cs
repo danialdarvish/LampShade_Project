@@ -8,6 +8,7 @@ using CommentManagement.Infrastructure.EFCore;
 using DiscountManagement.Infrastructure.EFCore;
 using InventoryManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
+using ShopManagement.Application.Contracts.Order;
 using ShopManagement.Domain.ProductPictureAgg;
 using ShopManagement.Infrastructure.EFCore;
 
@@ -69,6 +70,7 @@ namespace _01_LampshadeQuery.Query
                 product.IsInStock = productInventory.InStock;
                 var price = productInventory.UnitPrice;
                 product.Price = price.ToMoney();
+                product.DoublePrice = price;
 
                 var discount = discounts
                     .FirstOrDefault(x => x.ProductId == product.Id);
@@ -205,20 +207,35 @@ namespace _01_LampshadeQuery.Query
                     var discount = discounts
                         .FirstOrDefault(x => x.ProductId == product.Id);
 
-                    if (discount != null)
-                    {
-                        var discountRate = discount.DiscountRate;
-                        product.DiscountRate = discountRate;
-                        product.DiscountExpireDate = discount.EndDate.ToDiscountFormat();
-                        product.HasDiscount = discountRate > 0;
+                    if (discount == null) continue;
 
-                        var discountAmount = Math.Round((price * discountRate) / 100);
-                        product.PriceWithDiscount = (price - discountAmount).ToMoney();
-                    }
+                    var discountRate = discount.DiscountRate;
+                    product.DiscountRate = discountRate;
+                    product.DiscountExpireDate = discount.EndDate.ToDiscountFormat();
+                    product.HasDiscount = discountRate > 0;
+
+                    var discountAmount = Math.Round((price * discountRate) / 100);
+                    product.PriceWithDiscount = (price - discountAmount).ToMoney();
                 }
             }
 
             return products;
+        }
+
+        public List<CartItem> CheckInventoryStatus(List<CartItem> cartItems)
+        {
+            var inventory = _inventoryContext.Inventory.ToList();
+            foreach (var cartItem in cartItems)
+            {
+                if (inventory.Any(x => x.ProductId == cartItem.Id && x.InStock))
+                {
+                    var itemInventory = inventory.FirstOrDefault(x => x.ProductId == cartItem.Id);
+                    if (itemInventory != null)
+                        cartItem.IsInStock = itemInventory.CalculateCurrentCount() >= cartItem.Count;
+                }
+            }
+
+            return cartItems;
         }
     }
 }
