@@ -30,6 +30,7 @@ function addToCart(id, name, price, picture) {
 }
 
 function updateCart() {
+    debugger;
     let products = $.cookie(cookieName);
     products = JSON.parse(products);
     $("#cart_items_count").text(products.length);

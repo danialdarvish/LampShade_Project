@@ -20,7 +20,7 @@ namespace BlogManagement.Infrastructure.EFCore.Repository
         public string GetSlugBy(long id)
         {
             return _context.ArticleCategories.Select(x =>
-                new {x.Id, x.Slug}).FirstOrDefault(x => x.Id == id)?.Slug;
+                new { x.Id, x.Slug }).FirstOrDefault(x => x.Id == id)?.Slug;
         }
 
         public List<ArticleCategoryViewModel> GetArticleCategories()
@@ -52,22 +52,22 @@ namespace BlogManagement.Infrastructure.EFCore.Repository
         public List<ArticleCategoryViewModel> Search(ArticleCategorySearchModel searchModel)
         {
             var query = _context.ArticleCategories
-                .Include(x=>x.Articles)
+                .Include(x => x.Articles)
                 .Select(x => new ArticleCategoryViewModel
-            {
-                Id = x.Id,
-                Name = x.Name,
-                Description = x.Description,
-                Picture = x.Picture,
-                ShowOrder = x.ShowOrder,
-                CreationDate = x.CreationDate.ToFarsi(),
-                ArticlesCount = x.Articles.Count
-            });
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Description = x.Description,
+                    Picture = x.Picture,
+                    ShowOrder = x.ShowOrder,
+                    CreationDate = x.CreationDate.ToFarsi(),
+                    ArticlesCount = x.Articles.Count
+                });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))
                 query = query.Where(x => x.Name.Contains(searchModel.Name));
 
-            return query.OrderByDescending(x=>x.ShowOrder).ToList();
+            return query.OrderByDescending(x => x.ShowOrder).ToList();
         }
     }
 }

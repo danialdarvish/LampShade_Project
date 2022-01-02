@@ -3,6 +3,6 @@
     public class StockStatus
     {
         public bool IsInStock { get; set; }
-        public string ProductName{ get; set; }
+        public string ProductName { get; set; }
     }
 }

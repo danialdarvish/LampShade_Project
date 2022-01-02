@@ -11,5 +11,6 @@
         AuthViewModel CurrentAccountInfo();
         List<int> GetPermissions();
         long CurrentAccountId();
+        string CurrentAccountMobile();
     }
 }

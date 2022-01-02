@@ -68,7 +68,7 @@ namespace _01_LampshadeQuery.Query
             if (productInventory != null)
             {
                 product.IsInStock = productInventory.InStock;
-                var price = productInventory.UnitPrice;
+                var price = productInventory.UnitPrice; 
                 product.Price = price.ToMoney();
                 product.DoublePrice = price;
 

@@ -2,8 +2,8 @@
 @model ServiceHost.Pages.ProductModel
 @{
     ViewData["Title"] = Model.Product.Name;
-    ViewData["keywords"] = Model.Product.Keywords; 
-    ViewData["metaDescription"] = Model.Product.MetaDescription; 
+    ViewData["keywords"] = Model.Product.Keywords;
+    ViewData["metaDescription"] = Model.Product.MetaDescription;
 }
 
 <div class="breadcrumb-area section-space--half">
@@ -163,7 +163,6 @@
                                         @if (Model.Product.HasDiscount)
                                         {
                                             <div class="product-countdown" data-countdown="@Model.Product.DiscountExpireDate"></div>
-
                                         }
 
                                         <div class="product-actions">

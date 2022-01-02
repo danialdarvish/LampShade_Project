@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Dynamic;
 using _0_Framework.Domain;
 using BlogManagement.Application.Contracts.ArticleCategory;
 

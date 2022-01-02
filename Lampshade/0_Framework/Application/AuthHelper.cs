@@ -28,7 +28,8 @@ namespace _0_Framework.Application
                 new Claim(ClaimTypes.Name, account.Fullname),
                 new Claim(ClaimTypes.Role, account.RoleId.ToString()),
                 new Claim("Username", account.Username), // Or Use ClaimTypes.NameIdentifier
-                new Claim("permissions", permissions)
+                new Claim("permissions", permissions),
+                new Claim("Mobile", account.Mobile)
             };
 
             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -84,6 +85,14 @@ namespace _0_Framework.Application
                 return long.Parse(_contextAccessor.HttpContext
                     .User.Claims.FirstOrDefault(x => x.Type == "AccountId")?.Value);
             return 0;
+        }
+
+        public string CurrentAccountMobile()
+        {
+            if (IsAuthenticated())
+                return _contextAccessor.HttpContext
+                    .User.Claims.FirstOrDefault(x => x.Type == "Mobile")?.Value;
+            return "";
         }
 
         public bool IsAuthenticated()

@@ -12,8 +12,8 @@ namespace AccountManagement.Application
         private readonly IAuthHelper _authHelper;
         private readonly IFileUploader _fileUploader;
         private readonly IPasswordHasher _passwordHasher;
-        private readonly IAccountRepository _accountRepository;
         private readonly IRoleRepository _roleRepository;
+        private readonly IAccountRepository _accountRepository;
 
         public AccountApplication(IAccountRepository accountRepository, IPasswordHasher passwordHasher,
             IFileUploader fileUploader, IAuthHelper authHelper, IRoleRepository roleRepository)
@@ -25,6 +25,16 @@ namespace AccountManagement.Application
             _roleRepository = roleRepository;
         }
 
+
+        public AccountViewModel GetAccountBy(long id)
+        {
+            var account = _accountRepository.Get(id);
+            return new AccountViewModel
+            {
+                Fullname = account.Fullname,
+                Mobile = account.Mobile
+            };
+        }
 
         public OperationResult Register(RegisterAccount command)
         {
@@ -101,7 +111,7 @@ namespace AccountManagement.Application
                 .Select(x => x.Code).ToList();
 
             var authViewModel = new AuthViewModel(account.Id, account.RoleId, account.Fullname,
-                account.Username, permissions);
+                account.Username, permissions, "");
 
             _authHelper.Signin(authViewModel);
 

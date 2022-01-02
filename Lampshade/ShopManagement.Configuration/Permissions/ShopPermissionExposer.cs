@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using _0_Framework.Infrastructure;
 
 namespace ShopManagement.Configuration.Permissions

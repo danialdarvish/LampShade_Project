@@ -58,3 +58,5 @@ C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ShopManagement.Configurat
 C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ShopManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contracts.pdb
 C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ShopManagement.Configuration\bin\Debug\net5.0\AccountManagement.Domain.pdb
 C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ShopManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagement.Infrastructure.AccountAcl.dll
+C:\Users\ASUS\source\repos\LampShade_Project\Lampshade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagement.Infrastructure.AccountAcl.pdb
